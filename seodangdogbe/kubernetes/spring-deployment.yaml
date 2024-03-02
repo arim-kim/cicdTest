@@ -1,0 +1,46 @@
+apiVersion: apps/v1
+# 정의하는 리소스 Deployment, pod, service 등
+# Deployment -> pod 관리
+kind: Deployment
+# 배포 이름, 레이블
+metadata:
+  name: seodangdogbe
+  labels:
+    app: seodangdogbe
+# 배포 리소스
+spec:
+  replicas: 3 # 복제본 개수
+  strategy:
+    type: Recreate # pod 삭제 후 새로 생성하기 옵션
+  selector:
+    matchLabels:
+      app: seodangdogbe
+  template:
+    metadata:
+      labels:
+        app: seodangdogbe
+        tier: seodangdogbe
+    spec:
+      containers:
+        - name: seodangdogbe
+          image: kal72222222/seodangdogbe:latest
+          imagePullPolicy: Always # 무조건 최신 이미지 가져오기
+          ports:
+            - containerPort: 8080 # 컨테이너 포트 (내부) 지정하기
+              name: seodangdogbe
+---
+apiVersion: v1
+# 파드 네트워크 관리
+kind: Service
+metadata:
+  name: seodangdogbe
+  labels:
+    app: seodangdogbe
+spec:
+  ports:
+    - port: 8080
+      targetPort: 8080
+  selector:
+    app: seodangdogbe
+    tier: seodangdogbe
+  type: LoadBalancer
