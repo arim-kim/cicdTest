@@ -1,0 +1,47 @@
+apiVersion: apps/v1
+
+# 정의하는 리소스 Deployment, pod, service 등
+# Deployment -> pod 관리
+kind: Deployment
+# 배포 이름, 레이블
+metadata:
+  name: seodangdogflask
+  labels:
+    app: seodangdogflask
+# 배포 리소스
+spec:
+  replicas: 3 # 복제본 개수
+  strategy:
+    type: Recreate # pod 삭제 후 새로 생성하기 옵션
+  selector:
+    matchLabels:
+      app: seodangdogflask
+  template:
+    metadata:
+      labels:
+        app: seodangdogflask
+        tier: seodangdogflask
+    spec:
+      containers:
+        - name: seodangdogflask
+          image: kal72222222/seodangdogflask:latest
+          imagePullPolicy: Always # 무조건 최신 이미지 가져오기
+          ports:
+            - containerPort: 5000 # 컨테이너 포트 (내부) 지정하기
+              name: seodangdogflask
+---
+apiVersion: v1
+# 파드 네트워크 관리
+kind: Service
+metadata:
+  name: seodangdogflask
+  labels:
+    app: seodangdogflask
+spec:
+  ports:
+    - port: 5000
+      targetPort: 5000
+  selector:
+    app: seodangdogflask
+    tier: seodangdogflask
+  type: LoadBalancer
