@@ -60,6 +60,7 @@ public class JWTProvider {
                 .signWith(key, SignatureAlgorithm.HS256)
                 .compact();
 
+        // 생성된 JWT token
         return JWT.builder()
                 .grantType("Bearer")
                 .accessToken(accessToken)
@@ -72,7 +73,7 @@ public class JWTProvider {
 
         // 토근 복호화
         Claims claims = parseClaims(accessToken);
-        if (claims.get("member") == null) {
+        if (claims.get("memberId") == null) {
             throw new RuntimeException("권한 정보가 없는 토큰입니다.");
         }
 

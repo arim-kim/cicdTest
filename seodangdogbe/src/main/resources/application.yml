@@ -11,6 +11,6 @@ spring:
     hibernate:
       ddl-auto: update
   jwt:
-    secret:
+    secret: 32a2bbdf6405fe9eb461489b71978299f6d7f4792336d80470bf2bdc8fdf8c1fad967678d28e5dfc52afa046668db1a696ce4cbd48092293554a604f9e48c19d
     accessTokenExpireTime : 86400000
 
