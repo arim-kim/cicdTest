@@ -27,6 +27,7 @@ import java.util.stream.Collectors;
 public class JWTProvider {
 
     private final Key key;
+    // 변수로 빼서 다시 적용하기
     private final long accessTokenExpireTime;
 
     public JWTProvider(@Value("${jwt.secret}") String secret, @Value("${jwt.accessTokenExpireTime}") int accessTokenExpireTime) {
