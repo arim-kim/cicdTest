@@ -1,4 +1,4 @@
-package com.example.seodangdogbe.auth.jwt;
+package com.example.seodangdogbe.jwt;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -8,7 +8,7 @@ import lombok.Data;
 @Data
 @AllArgsConstructor
 public class JWT {
-    private String grantType;
+    private String grantType; // 우리는 Bearer 만 사용할 것임
     private String accessToken;
     private String refreshToken;
 }

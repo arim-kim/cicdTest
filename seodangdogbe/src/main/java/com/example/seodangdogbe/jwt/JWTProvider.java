@@ -1,15 +1,17 @@
-package com.example.seodangdogbe.auth.jwt;
+package com.example.seodangdogbe.jwt;
 
+import com.example.seodangdogbe.auth.principal.MemberPrincipal;
+import com.example.seodangdogbe.member.entity.Member;
 import io.jsonwebtoken.*;
 import io.jsonwebtoken.io.Decoders;
 import io.jsonwebtoken.security.Keys;
-import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.core.userdetails.User;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.stereotype.Component;
@@ -21,18 +23,16 @@ import java.util.Date;
 import java.util.stream.Collectors;
 
 @Component
-@RequiredArgsConstructor
 @Slf4j
 public class JWTProvider {
 
     private final Key key;
+    private final long accessTokenExpireTime;
 
-    @Value("${jwt.accessTokenExpireTime}")
-    private int accessTokenExpireTime;
-
-    public JWTProvider(@Value("${jwt.secret}") String secret) {
+    public JWTProvider(@Value("${jwt.secret}") String secret, @Value("${jwt.accessTokenExpireTime}") int accessTokenExpireTime) {
         byte[] keyBytes = Decoders.BASE64.decode(secret);
         this.key = Keys.hmacShaKeyFor(keyBytes);
+        this.accessTokenExpireTime = accessTokenExpireTime;
     }
 
     // 로그인 시도 -> accessToken, Refresh Token 생성하기
@@ -46,7 +46,7 @@ public class JWTProvider {
 
         // Access Token 생성하기
         // Date accessTokenExpireTime = new Date(now + accessTokenExpireTime);
-        Date accessTokenExpireTime = new Date(now + 86400000);
+        Date accessTokenExpireTime = new Date(now + 86400000 * 30); // 지금 시간 + 24 * 30 => 30일
         String accessToken = Jwts.builder()
                 .setSubject(authentication.getName())
                 .claim("member", authorities)
@@ -56,7 +56,7 @@ public class JWTProvider {
 
         // Refresh Token 생성
         String refreshToken = Jwts.builder()
-                .setExpiration(new Date(now + 86400000))
+                .setExpiration(new Date(now + 86400000 * 30))
                 .signWith(key, SignatureAlgorithm.HS256)
                 .compact();
 
@@ -73,7 +73,7 @@ public class JWTProvider {
 
         // 토근 복호화
         Claims claims = parseClaims(accessToken);
-        if (claims.get("memberId") == null) {
+        if (claims.get("member") == null) {
             throw new RuntimeException("권한 정보가 없는 토큰입니다.");
         }
 
@@ -121,4 +121,5 @@ public class JWTProvider {
             return e.getClaims();
         }
     }
+
 }

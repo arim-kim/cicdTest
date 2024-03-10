@@ -1,13 +1,23 @@
 spring:
   datasource:
-#    driver-class-name: com.mysql.cj.jdbc.Driver
-#    url:
-#    username:
-#    password:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://seodangdog-mysql.cza82kskeqwa.ap-northeast-2.rds.amazonaws.com:3306/seodangdog?
+    username: seodangdog
+    password: seodangdog
   jpa:
     database: mysql
     database-platform: org.hibernate.dialect.MySQL8Dialect
     show-sql: true
     hibernate:
-      ddl-auto: update
+      ddl-auto: create
+
+
+jwt:
+  secret: 32a2bbdf6405fe9eb461489b71978299f6d7f4792336d80470bf2bdc8fdf8c1fad967678d28e5dfc52afa046668db1a696ce4cbd48092293554a604f9e48c19d
+  accessTokenExpireTime : 86400000
+
+#logging.level:
+#  org.hibernate.SQL: debug
+#  org.hibernate.type: trace
+  # parameter Binding
 

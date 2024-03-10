@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.example.seodangdogbe.SeodangdogbeApplicationTests" tests="1" skipped="0" failures="0" errors="0" timestamp="2024-03-02T06:48:54" hostname="gim-alim-ui-MacBookAir.local" time="0.376">
+<testsuite name="com.example.seodangdogbe.SeodangdogbeApplicationTests" tests="1" skipped="0" failures="0" errors="0" timestamp="2024-03-08T13:52:01" hostname="gim-alim-ui-MacBookAir.local" time="0.274">
   <properties/>
-  <testcase name="contextLoads()" classname="com.example.seodangdogbe.SeodangdogbeApplicationTests" time="0.376"/>
-  <system-out><![CDATA[15:48:54.048 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [com.example.seodangdogbe.SeodangdogbeApplicationTests]: SeodangdogbeApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
-15:48:54.083 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration com.example.seodangdogbe.SeodangdogbeApplication for test class com.example.seodangdogbe.SeodangdogbeApplicationTests
+  <testcase name="contextLoads()" classname="com.example.seodangdogbe.SeodangdogbeApplicationTests" time="0.274"/>
+  <system-out><![CDATA[22:51:59.151 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [com.example.seodangdogbe.SeodangdogbeApplicationTests]: SeodangdogbeApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+22:51:59.192 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration com.example.seodangdogbe.SeodangdogbeApplication for test class com.example.seodangdogbe.SeodangdogbeApplicationTests
 
   .   ____          _            __ _ _
  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
@@ -13,41 +13,32 @@
  =========|_|==============|___/=/_/_/_/
  :: Spring Boot ::                (v3.2.3)
 
-2024-03-02T15:48:54.231+09:00  INFO 2599 --- [    Test worker] c.e.s.SeodangdogbeApplicationTests       : Starting SeodangdogbeApplicationTests using Java 17.0.9 with PID 2599 (started by kim-arim in /Users/kim-arim/Desktop/cicdTest/mytestproject/seodangdogbe)
-2024-03-02T15:48:54.231+09:00  INFO 2599 --- [    Test worker] c.e.s.SeodangdogbeApplicationTests       : No active profile set, falling back to 1 default profile: "default"
-2024-03-02T15:48:54.427+09:00  INFO 2599 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
-2024-03-02T15:48:54.432+09:00  INFO 2599 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 4 ms. Found 0 MongoDB repository interfaces.
-2024-03-02T15:48:54.712+09:00  INFO 2599 --- [    Test worker] org.mongodb.driver.client                : MongoClient with metadata {"driver": {"name": "mongo-java-driver|sync|spring-boot", "version": "4.11.1"}, "os": {"type": "Darwin", "name": "Mac OS X", "architecture": "aarch64", "version": "13.5"}, "platform": "Java/Homebrew/17.0.9+0"} created with settings MongoClientSettings{readPreference=primary, writeConcern=WriteConcern{w=null, wTimeout=null ms, journal=null}, retryWrites=true, retryReads=true, readConcern=ReadConcern{level=null}, credential=null, transportSettings=null, streamFactoryFactory=null, commandListeners=[], codecRegistry=ProvidersCodecRegistry{codecProviders=[ValueCodecProvider{}, BsonValueCodecProvider{}, DBRefCodecProvider{}, DBObjectCodecProvider{}, DocumentCodecProvider{}, CollectionCodecProvider{}, IterableCodecProvider{}, MapCodecProvider{}, GeoJsonCodecProvider{}, GridFSFileCodecProvider{}, Jsr310CodecProvider{}, JsonObjectCodecProvider{}, BsonCodecProvider{}, EnumCodecProvider{}, com.mongodb.client.model.mql.ExpressionCodecProvider@5fdd97c1, com.mongodb.Jep395RecordCodecProvider@3b5a19ed, com.mongodb.KotlinCodecProvider@15d236fd]}, loggerSettings=LoggerSettings{maxDocumentLength=1000}, clusterSettings={hosts=[localhost:27017], srvServiceName=mongodb, mode=SINGLE, requiredClusterType=UNKNOWN, requiredReplicaSetName='null', serverSelector='null', clusterListeners='[]', serverSelectionTimeout='30000 ms', localThreshold='15 ms'}, socketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=0, receiveBufferSize=0, proxySettings=ProxySettings{host=null, port=null, username=null, password=null}}, heartbeatSocketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=10000, receiveBufferSize=0, proxySettings=ProxySettings{host=null, port=null, username=null, password=null}}, connectionPoolSettings=ConnectionPoolSettings{maxSize=100, minSize=0, maxWaitTimeMS=120000, maxConnectionLifeTimeMS=0, maxConnectionIdleTimeMS=0, maintenanceInitialDelayMS=0, maintenanceFrequencyMS=60000, connectionPoolListeners=[], maxConnecting=2}, serverSettings=ServerSettings{heartbeatFrequencyMS=10000, minHeartbeatFrequencyMS=500, serverListeners='[]', serverMonitorListeners='[]'}, sslSettings=SslSettings{enabled=false, invalidHostNameAllowed=false, context=null}, applicationName='null', compressorList=[], uuidRepresentation=JAVA_LEGACY, serverApi=null, autoEncryptionSettings=null, dnsClient=null, inetAddressResolver=null, contextProvider=null}
-2024-03-02T15:48:54.714+09:00  INFO 2599 --- [localhost:27017] org.mongodb.driver.cluster               : Exception in monitor thread while connecting to server localhost:27017
+2024-03-08T22:51:59.360+09:00  INFO 24226 --- [    Test worker] c.e.s.SeodangdogbeApplicationTests       : Starting SeodangdogbeApplicationTests using Java 17.0.9 with PID 24226 (started by kim-arim in /Users/kim-arim/Desktop/cicdTest/mytestproject/seodangdogbe)
+2024-03-08T22:51:59.361+09:00  INFO 24226 --- [    Test worker] c.e.s.SeodangdogbeApplicationTests       : No active profile set, falling back to 1 default profile: "default"
+2024-03-08T22:51:59.659+09:00  INFO 24226 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-03-08T22:51:59.687+09:00  INFO 24226 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 24 ms. Found 1 JPA repository interface.
+2024-03-08T22:51:59.902+09:00  INFO 24226 --- [    Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-03-08T22:51:59.921+09:00  INFO 24226 --- [    Test worker] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.4.Final
+2024-03-08T22:51:59.937+09:00  INFO 24226 --- [    Test worker] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-03-08T22:52:00.045+09:00  INFO 24226 --- [    Test worker] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-03-08T22:52:00.058+09:00  INFO 24226 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-03-08T22:52:00.416+09:00  INFO 24226 --- [    Test worker] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@794d28a3
+2024-03-08T22:52:00.418+09:00  INFO 24226 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-03-08T22:52:00.454+09:00  WARN 24226 --- [    Test worker] org.hibernate.orm.deprecation            : HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-03-08T22:52:00.455+09:00  WARN 24226 --- [    Test worker] org.hibernate.orm.deprecation            : HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2024-03-08T22:52:00.781+09:00  INFO 24226 --- [    Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+Hibernate: drop table if exists member
+Hibernate: create table member (member_seq bigint not null auto_increment, nickname varchar(10), member_id varchar(100), password varchar(100), role enum ('Member'), primary key (member_seq)) engine=InnoDB
+2024-03-08T22:52:00.877+09:00  INFO 24226 --- [    Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-03-08T22:52:01.060+09:00  WARN 24226 --- [    Test worker] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-03-08T22:52:01.069+09:00  WARN 24226 --- [    Test worker] .s.s.UserDetailsServiceAutoConfiguration : 
 
-com.mongodb.MongoSocketOpenException: Exception opening socket
-	at com.mongodb.internal.connection.SocketStream.lambda$open$0(SocketStream.java:84) ~[mongodb-driver-core-4.11.1.jar:na]
-	at java.base/java.util.Optional.orElseThrow(Optional.java:403) ~[na:na]
-	at com.mongodb.internal.connection.SocketStream.open(SocketStream.java:84) ~[mongodb-driver-core-4.11.1.jar:na]
-	at com.mongodb.internal.connection.InternalStreamConnection.open(InternalStreamConnection.java:211) ~[mongodb-driver-core-4.11.1.jar:na]
-	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitorRunnable.lookupServerDescription(DefaultServerMonitor.java:196) ~[mongodb-driver-core-4.11.1.jar:na]
-	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitorRunnable.run(DefaultServerMonitor.java:156) ~[mongodb-driver-core-4.11.1.jar:na]
-	at java.base/java.lang.Thread.run(Thread.java:840) ~[na:na]
-Caused by: java.net.ConnectException: Connection refused
-	at java.base/sun.nio.ch.Net.pollConnect(Native Method) ~[na:na]
-	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:672) ~[na:na]
-	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:554) ~[na:na]
-	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:602) ~[na:na]
-	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327) ~[na:na]
-	at java.base/java.net.Socket.connect(Socket.java:633) ~[na:na]
-	at com.mongodb.internal.connection.SocketStreamHelper.initialize(SocketStreamHelper.java:76) ~[mongodb-driver-core-4.11.1.jar:na]
-	at com.mongodb.internal.connection.SocketStream.initializeSocket(SocketStream.java:104) ~[mongodb-driver-core-4.11.1.jar:na]
-	at com.mongodb.internal.connection.SocketStream.open(SocketStream.java:78) ~[mongodb-driver-core-4.11.1.jar:na]
-	... 4 common frames omitted
-
-2024-03-02T15:48:54.805+09:00  WARN 2599 --- [    Test worker] .s.s.UserDetailsServiceAutoConfiguration : 
-
-Using generated security password: 19a0ea62-895c-41e7-94f4-3ed60ea12405
+Using generated security password: 5cfa707a-ff96-4662-94e4-dc350bc45c1a
 
 This generated password is for development use only. Your security configuration must be updated before running your application in production.
 
-2024-03-02T15:48:54.850+09:00  INFO 2599 --- [    Test worker] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@3866c96e, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@241fc278, org.springframework.security.web.context.SecurityContextHolderFilter@45e11627, org.springframework.security.web.header.HeaderWriterFilter@266da047, org.springframework.web.filter.CorsFilter@5c76fce4, org.springframework.security.web.csrf.CsrfFilter@7ed7ae, org.springframework.security.web.authentication.logout.LogoutFilter@29147c12, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@59933644, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@2f1f9515, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@5aab5b31, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@4beae1e3, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@5b4954b2, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@74eec640, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@5408d4b3, org.springframework.security.web.access.ExceptionTranslationFilter@2c6927f0, org.springframework.security.web.access.intercept.AuthorizationFilter@5731caaf]
-2024-03-02T15:48:54.872+09:00  INFO 2599 --- [    Test worker] c.e.s.SeodangdogbeApplicationTests       : Started SeodangdogbeApplicationTests in 0.739 seconds (process running for 1.192)
+2024-03-08T22:52:01.198+09:00  INFO 24226 --- [    Test worker] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@182469d0, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@62aefc75, org.springframework.security.web.context.SecurityContextHolderFilter@2ef3efcc, org.springframework.security.web.header.HeaderWriterFilter@46f597f1, org.springframework.security.web.authentication.logout.LogoutFilter@6421bc7e, com.example.seodangdogbe.auth.jwt.JWTAuthenticationFilter@c6653e, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@5c7b504, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@772589ed, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@435e224d, org.springframework.security.web.session.SessionManagementFilter@247d44b4, org.springframework.security.web.access.ExceptionTranslationFilter@5a2297d7, org.springframework.security.web.access.intercept.AuthorizationFilter@68024e57]
+2024-03-08T22:52:01.335+09:00  INFO 24226 --- [    Test worker] c.e.s.SeodangdogbeApplicationTests       : Started SeodangdogbeApplicationTests in 2.083 seconds (process running for 2.536)
 ]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
